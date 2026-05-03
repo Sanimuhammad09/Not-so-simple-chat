@@ -11,6 +11,7 @@ com/example/coffeeshop/service/OrderQueue.class
 com/example/coffeeshop/adapter/PaymentAdapter.class
 com/example/coffeeshop/controller/CoffeeShopController.class
 com/example/coffeeshop/repository/ChatRepository.class
+com/example/coffeeshop/controller/HomeController.class
 com/example/coffeeshop/observer/OrderReadyEvent.class
 com/example/coffeeshop/factory/CoffeeFactory$Cappuccino.class
 com/example/coffeeshop/facade/CoffeeShopFacade.class

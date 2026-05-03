@@ -16,6 +16,7 @@
 /Users/hello/Not so simple chat/src/main/java/com/example/coffeeshop/service/Barista.java
 /Users/hello/Not so simple chat/src/main/java/com/example/coffeeshop/decorator/MilkDecorator.java
 /Users/hello/Not so simple chat/src/main/java/com/example/coffeeshop/observer/OrderReadyEvent.java
+/Users/hello/Not so simple chat/src/main/java/com/example/coffeeshop/controller/HomeController.java
 /Users/hello/Not so simple chat/src/main/java/com/example/coffeeshop/service/OrderQueue.java
 /Users/hello/Not so simple chat/src/main/java/com/example/coffeeshop/repository/ChatRepository.java
 /Users/hello/Not so simple chat/src/main/java/com/example/coffeeshop/command/Command.java

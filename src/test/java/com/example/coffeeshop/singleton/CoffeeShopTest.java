@@ -4,32 +4,27 @@ import com.example.coffeeshop.command.CommandInvoker;
 import com.example.coffeeshop.model.Order;
 import com.example.coffeeshop.service.Barista;
 import com.example.coffeeshop.service.OrderQueue;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 
 import static org.mockito.Mockito.*;
 
+@SpringBootTest
 class CoffeeShopTest {
 
-    @Mock
+    @MockBean
     private OrderQueue orderQueue;
 
-    @Mock
+    @MockBean
     private Barista barista;
 
-    @Mock
+    @MockBean
     private CommandInvoker commandInvoker;
 
-    @InjectMocks
+    @Autowired
     private CoffeeShop coffeeShop;
-
-    @BeforeEach
-    void setUp() {
-        MockitoAnnotations.openMocks(this);
-    }
 
     @Test
     void testPlaceOrder() {
@@ -37,6 +32,7 @@ class CoffeeShopTest {
         coffeeShop.placeOrder(order);
 
         verify(orderQueue).addOrder(order);
-        verify(barista).processOrder(order);
+        verify(commandInvoker).takeCommand(any());
+        verify(commandInvoker).placeOrders();
     }
 }

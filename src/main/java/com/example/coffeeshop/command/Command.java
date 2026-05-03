@@ -6,18 +6,3 @@ import com.example.coffeeshop.service.Barista;
 public interface Command {
     void execute();
 }
-
-class PlaceOrderCommand implements Command {
-    private Barista barista;
-    private Order order;
-
-    public PlaceOrderCommand(Barista barista, Order order) {
-        this.barista = barista;
-        this.order = order;
-    }
-
-    @Override
-    public void execute() {
-        barista.processOrder(order);
-    }
-}

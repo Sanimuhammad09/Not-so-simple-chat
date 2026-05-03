@@ -2,26 +2,21 @@ package com.example.coffeeshop.service;
 
 import com.example.coffeeshop.model.ChatMessage;
 import com.example.coffeeshop.repository.ChatRepository;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 
 import static org.mockito.Mockito.*;
 
+@SpringBootTest
 class ChatServiceTest {
     
-    @Mock
+    @MockBean
     private ChatRepository chatRepository;
 
-    @InjectMocks
+    @Autowired
     private ChatService chatService;
-
-    @BeforeEach
-    void init() {
-        MockitoAnnotations.openMocks(this);
-    }
 
     @Test
     void testSaveMessage() {

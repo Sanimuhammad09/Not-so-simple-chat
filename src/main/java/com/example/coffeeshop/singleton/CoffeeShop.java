@@ -6,6 +6,9 @@ import com.example.coffeeshop.service.OrderQueue;
 import com.example.coffeeshop.service.Barista;
 import org.springframework.stereotype.Component;
 
+import com.example.coffeeshop.command.Command;
+import com.example.coffeeshop.command.PlaceOrderCommand;
+
 @Component
 public class CoffeeShop {
 
@@ -23,8 +26,10 @@ public class CoffeeShop {
         orderQueue.addOrder(order);
         System.out.println("Order added to queue: " + order.getOrderId());
         
-        // We can process it asynchronously via Barista
-        barista.processOrder(order);
+        // Use Command Pattern to process the order
+        Command placeOrderCommand = new PlaceOrderCommand(barista, order);
+        commandInvoker.takeCommand(placeOrderCommand);
+        commandInvoker.placeOrders();
     }
     
     public void processQueue() {

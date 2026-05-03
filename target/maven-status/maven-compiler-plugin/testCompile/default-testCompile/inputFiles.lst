@@ -1,3 +1,5 @@
 /Users/hello/Not so simple chat/src/test/java/com/example/coffeeshop/service/ChatServiceTest.java
 /Users/hello/Not so simple chat/src/test/java/com/example/coffeeshop/singleton/CoffeeShopTest.java
 /Users/hello/Not so simple chat/src/test/java/com/example/coffeeshop/service/OrderQueueTest.java
+/Users/hello/Not so simple chat/src/test/java/com/example/coffeeshop/controller/ChatControllerTest.java
+/Users/hello/Not so simple chat/src/test/java/com/example/coffeeshop/controller/CoffeeShopControllerTest.java

@@ -1,6 +1,7 @@
 package com.example.coffeeshop.command;
 
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +13,7 @@ public class CommandInvoker {
         commandList.add(command);
     }
 
+    @Transactional
     public void placeOrders() {
         for (Command command : commandList) {
             command.execute();
